@@ -37,13 +37,8 @@ require('lazy').setup({
       "nvim-tree/nvim-web-devicons", -- optional, but recommended
     },
     lazy = false, -- neo-tree will lazily load itself
-  }
-,
-{
-  'folke/tokyonight.nvim',
-  lazy = false,
-  priority = 1000,
-  opts = {},
-  }})
+  },
+  require 'plugins.colortheme'
+  })
 
-vim.cmd[[colorscheme tokyonight]]
+
