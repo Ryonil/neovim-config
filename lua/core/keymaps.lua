@@ -11,6 +11,9 @@ local opts = { noremap = true, silent = true }
 -- save file
 vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
 
+-- Open neotree
+vim.keymap.set('n', '<leader>e', '<cmd> Neotree <CR>', opts)
+
 -- save file without auto-formatting
 vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
 
