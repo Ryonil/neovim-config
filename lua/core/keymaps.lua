@@ -17,6 +17,9 @@ vim.keymap.set('n', '<leader>e', '<cmd> Neotree <CR>', opts)
 -- save file without auto-formatting
 vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
 
+-- Press jk fast to exit insert mode
+vim.keymap.set("i", "jk", "<ESC>", opts)
+
 -- quit file
 vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
 
