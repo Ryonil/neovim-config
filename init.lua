@@ -37,4 +37,5 @@ require('lazy').setup {
   require 'plugins.lsp',
   require 'plugins.autocompletion',
   require 'plugins.none-ls',
+  require 'plugins.indent-blankline',
 }
