@@ -38,4 +38,5 @@ require('lazy').setup {
   require 'plugins.autocompletion',
   require 'plugins.none-ls',
   require 'plugins.indent-blankline',
+  require 'plugins.diffview',
 }
