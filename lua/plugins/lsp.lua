@@ -142,6 +142,7 @@ return {
       terraformls = {},
       jsonls = {},
       yamlls = {},
+      svelte = {},
       lua_ls = {
         settings = {
           Lua = {
