@@ -27,15 +27,14 @@ rtp:prepend(lazypath)
 --    :Lazy update
 --
 -- NOTE: Here is where you install your plugins.
-require('lazy').setup({
-    require 'plugins.neotree',
+require('lazy').setup {
+  require 'plugins.neotree',
   require 'plugins.colortheme',
   require 'plugins.bufferline',
   require 'plugins.lualine',
   require 'plugins.treesitter',
   require 'plugins.telescope',
   require 'plugins.lsp',
-  require 'plugins.autocompletion'
-  })
-
-
+  require 'plugins.autocompletion',
+  require 'plugins.none-ls',
+}

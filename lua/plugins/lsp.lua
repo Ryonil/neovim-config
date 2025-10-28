@@ -29,6 +29,9 @@ return {
     -- Allows extra capabilities provided by nvim-cmp
     'hrsh7th/cmp-nvim-lsp',
   },
+  root_dir = function(fname)
+    return require('lspconfig').util.root_pattern('.git', '.stylua.toml')(fname)
+  end,
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
@@ -148,7 +151,7 @@ return {
             runtime = { version = 'LuaJIT' },
             workspace = {
               checkThirdParty = false,
-              library = vim.api.nvim_get_runtime_file('', true),
+              library = { vim.env.VIMRUNTIME },
             },
             diagnostics = {
               globals = { 'vim' },
@@ -181,4 +184,3 @@ return {
     end
   end,
 }
-
