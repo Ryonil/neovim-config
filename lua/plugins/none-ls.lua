@@ -12,7 +12,7 @@ return {
     -- Formatters & linters for mason to install
     require('mason-null-ls').setup {
       ensure_installed = {
-        'prettier', -- ts/js formatter
+        'prettierd', -- ts/js formatter
         'eslint_d', -- ts/js linter
         'shfmt', -- Shell formatter
         'checkmake', -- linter for Makefiles
@@ -24,14 +24,14 @@ return {
 
     local sources = {
       diagnostics.checkmake,
-      formatting.prettier.with { filetypes = { 'html', 'json', 'yaml', 'markdown', 'ts', 'svelte' } },
+      formatting.prettierd.with { filetypes = { 'html', 'json', 'yaml', 'markdown', 'ts', 'svelte', 'typescript' } },
       formatting.stylua,
       formatting.shfmt.with { args = { '-i', '4' } },
     }
 
     local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
     null_ls.setup {
-      -- debug = true, -- Enable debug mode. Inspect logs with :NullLsLog.
+      --debug = true, -- Enable debug mode. Inspect logs with :NullLsLog.
       sources = sources,
       -- you can reuse a shared lspconfig on_attach callback here
       on_attach = function(client, bufnr)
