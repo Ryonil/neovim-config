@@ -134,6 +134,7 @@ return {
     -- - settings (table): Override the default settings passed when initializing the server.
     local servers = {
       ts_ls = {},
+      prisma_language_server = {},
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       cssls = {},
       --tailwindcss = {},
