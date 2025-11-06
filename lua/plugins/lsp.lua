@@ -134,8 +134,8 @@ return {
     -- - settings (table): Override the default settings passed when initializing the server.
     local servers = {
       ts_ls = {},
-      prisma_language_server = {},
       html = { filetypes = { 'html', 'twig', 'hbs' } },
+      prismals = {},
       cssls = {},
       --tailwindcss = {},
       dockerls = {},
@@ -184,5 +184,12 @@ return {
       vim.lsp.config(server, cfg)
       vim.lsp.enable(server)
     end
+
+    vim.api.nvim_create_autocmd('BufWritePre', {
+      pattern = '*.prisma',
+      callback = function()
+        vim.lsp.buf.format { async = false }
+      end,
+    })
   end,
 }
