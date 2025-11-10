@@ -24,7 +24,7 @@ return {
 
     local sources = {
       diagnostics.checkmake,
-      formatting.prettierd.with { filetypes = { 'html', 'json', 'yaml', 'markdown', 'ts', 'svelte', 'typescript' } },
+      formatting.prettierd.with { filetypes = { 'html', 'yaml', 'json', 'markdown', 'ts', 'svelte', 'typescript' } },
       formatting.stylua,
       formatting.shfmt.with { args = { '-i', '4' } },
     }

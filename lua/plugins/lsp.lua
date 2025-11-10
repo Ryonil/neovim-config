@@ -142,8 +142,15 @@ return {
       sqlls = {},
       terraformls = {},
       jsonls = {},
-      yamlls = {},
+      yamlls = {
+        filetypes = { 'yaml', 'yml' },
+      },
       svelte = {},
+      helm_ls = {
+        yamlls = {
+          path = 'yaml-language-server',
+        },
+      },
       lua_ls = {
         settings = {
           Lua = {
@@ -184,6 +191,13 @@ return {
       vim.lsp.config(server, cfg)
       vim.lsp.enable(server)
     end
+
+    vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+      pattern = '**/deployments/*.yaml',
+      callback = function()
+        vim.opt_local.filetype = 'helm'
+      end,
+    })
 
     vim.api.nvim_create_autocmd('BufWritePre', {
       pattern = '*.prisma',
