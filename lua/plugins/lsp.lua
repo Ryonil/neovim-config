@@ -139,7 +139,7 @@ return {
       cssls = {},
       --tailwindcss = {},
       dockerls = {},
-      sqlls = {},
+      postgres_language_server = {},
       terraformls = {},
       jsonls = {},
       yamlls = {
