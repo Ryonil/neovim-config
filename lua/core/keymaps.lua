@@ -18,7 +18,7 @@ vim.keymap.set('n', '<leader>e', '<cmd> Neotree <CR>', opts)
 vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
 
 -- Press jk fast to exit insert mode
-vim.keymap.set("i", "jk", "<ESC>", opts)
+vim.keymap.set('i', 'jk', '<ESC>', opts)
 
 -- quit file
 vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
@@ -84,4 +84,3 @@ vim.keymap.set('n', ']d', function()
 end, { desc = 'Go to next diagnostic message' })
 
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })

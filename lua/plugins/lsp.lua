@@ -136,16 +136,20 @@ return {
       ts_ls = {},
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       prismals = {},
+      eslint = {},
       cssls = {},
       --tailwindcss = {},
       dockerls = {},
-      postgres_language_server = {},
+      --postgres_language_server = {},
       terraformls = {},
+      --eslint_lsp = {},
       jsonls = {},
       yamlls = {
         filetypes = { 'yaml', 'yml' },
       },
       svelte = {},
+      prettierd = {},
+      prettier = {},
       helm_ls = {
         yamlls = {
           path = 'yaml-language-server',
