@@ -7,6 +7,7 @@ return {
           lua = { 'stylua' },
           typescript = { 'prettierd' },
           javascript = { 'prettierd' },
+          svelte = { 'prettierd' },
         },
         format_on_save = {},
       },

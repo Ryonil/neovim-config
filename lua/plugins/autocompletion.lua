@@ -157,6 +157,16 @@ return { -- Autocompletion
         { name = 'buffer' },
         { name = 'path' },
       },
+      sorting = {
+        comparators = {
+          cmp.config.compare.offset,
+          cmp.config.compare.exact,
+          cmp.config.compare.score,
+          cmp.config.compare.recently_used,
+          --require('cmp-under-comparator').under,
+          cmp.config.compare.kind,
+        },
+      },
       formatting = {
         fields = { 'kind', 'abbr', 'menu' },
         format = function(entry, vim_item)
